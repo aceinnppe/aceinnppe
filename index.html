@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace in NPPE | Premium, Affordable & Realistic Practice Exams</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        canva: {
+                            purple: '#7d2ae8',
+                            blue: '#00c4cc',
+                            dark: '#0f172a',
+                            light: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03)',
+                        'premium-hover': '0 20px 40px -10px rgba(125, 42, 232, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar styling for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 999px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- Floating Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-900/60 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-canva-purple to-canva-blue flex items-center justify-center text-white font-extrabold text-xl shadow-md transition-transform group-hover:scale-105">A</span>
+                <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-canva-purple via-brand-700 to-canva-blue bg-clip-text text-transparent">Ace in NPPE</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-canva-purple dark:hover:text-canva-blue transition-colors">Why Choose Us</a>
+                <a href="#mini-quiz" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-canva-purple dark:hover:text-canva-blue transition-colors">Interactive Quiz</a>
+                <a href="#products" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-canva-purple dark:hover:text-canva-blue transition-colors">Study Guides</a>
+                <a href="#blueprint" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-canva-purple dark:hover:text-canva-blue transition-colors">Exam Blueprint</a>
+                <a href="#faq" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-canva-purple dark:hover:text-canva-blue transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Mode Switcher and CTA Buttons -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-all" aria-label="Toggle dark mode">
+                    <!-- Sun Icon (shown in dark mode) -->
+                    <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <!-- Moon Icon (shown in light mode) -->
+                    <svg id="moon-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+
+                <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-canva-purple to-brand-600 hover:opacity-90 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                    Shop on Ko-fi
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="p-2 md:hidden rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#features" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Why Choose Us</a>
+                <a href="#mini-quiz" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Interactive Quiz</a>
+                <a href="#products" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Study Guides</a>
+                <a href="#blueprint" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Exam Blueprint</a>
+                <a href="#faq" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">FAQ</a>
+                <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="block text-center mt-4 px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-canva-purple to-brand-600 rounded-xl">Shop on Ko-fi</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Block -->
+    <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <!-- Radial dynamic decoration backgrounds -->
+        <div class="absolute top-0 right-0 -translate-y-12 translate-x-12 w-[35rem] h-[35rem] rounded-full bg-gradient-to-br from-canva-purple/10 to-brand-500/5 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-[30rem] h-[30rem] rounded-full bg-gradient-to-br from-brand-500/5 to-canva-blue/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <!-- Alert Pill -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-900/50 text-brand-700 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider mb-6 hover:scale-105 transition-transform cursor-default">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                Fully Aligned with the 2026 NPPE Syllabus
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 max-w-4xl mx-auto leading-tight sm:leading-none">
+                Pass the <span class="bg-gradient-to-r from-canva-purple via-brand-600 to-canva-blue bg-clip-text text-transparent">NPPE Exam</span> on Your First Attempt
+            </h1>
+
+            <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal">
+                Don't overpay for test prep. Discover the most realistic, scenario-based practice exams designed by successful candidates to save you time and maximize your chance of licensing success.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-canva-purple to-brand-600 hover:shadow-xl hover:shadow-brand-500/10 rounded-2xl hover:-translate-y-0.5 transition-all">
+                    View Study Guides
+                    <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+                <a href="#mini-quiz" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-2xl hover:-translate-y-0.5 transition-all">
+                    Try Free Quiz
+                </a>
+            </div>
+
+            <!-- Trust / Metric Row -->
+            <div class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <span class="block text-3xl font-extrabold text-canva-purple dark:text-canva-blue">220+</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Blueprint Questions</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-extrabold text-canva-purple dark:text-canva-blue">100%</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Syllabus Coverage</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-extrabold text-canva-purple dark:text-canva-blue">1/3 Price</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Of Big Prep Competitors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Features Section -->
+    <section id="features" class="py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">
+                    Engineered to Mimic the Actual Exam Blueprint
+                </h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                    Why waste time reading textbook theory you already know? Target your study time on high-weight areas and master the nuances of ethics, law, and professionalism.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-premium border border-slate-100 dark:border-slate-800/50 hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">Realistic Scenarios</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        The real NPPE evaluates application over pure rote learning. Our mock exams are carefully tuned to give you professional dilemma scenarios just like the exam.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-premium border border-slate-100 dark:border-slate-800/50 hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">Accessible & Fair Pricing</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Licensing pathways in Canada are already incredibly expensive. We combat price gouging by offering full exams for under a third of our competitors' rates.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-premium border border-slate-100 dark:border-slate-800/50 hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">Rich Explanation Breakdowns</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Knowing *why* an answer is right or wrong makes all the difference. Our study guides explain correct and incorrect responses so you absorb structural concepts efficiently.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Live Mini-Quiz (Core Immersive Element) -->
+    <section id="mini-quiz" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-sm font-semibold tracking-wider text-canva-purple dark:text-canva-blue uppercase">Interactive Sandbox</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight mt-2">
+                    Test Your Readiness Right Now
+                </h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-300">
+                    Try this interactive 5-question quick sampler representing actual scenario and law-related questions on the NPPE.
+                </p>
+            </div>
+
+            <!-- Quiz Engine Card -->
+            <div class="bg-slate-50 dark:bg-slate-800/40 rounded-3xl p-6 sm:p-10 shadow-premium border border-slate-100 dark:border-slate-800">
+                
+                <!-- Quiz Progress Bar -->
+                <div class="flex items-center justify-between mb-6 text-sm text-slate-500 dark:text-slate-400 font-medium">
+                    <span id="quiz-question-number">Question 1 of 5</span>
+                    <span id="quiz-current-score">Score: 0 / 5</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full mb-8 overflow-hidden">
+                    <div id="quiz-progress-bar" class="bg-gradient-to-r from-canva-purple to-canva-blue h-full w-1/5 transition-all duration-300"></div>
+                </div>
+
+                <!-- Active Question Box -->
+                <div class="min-h-[220px]">
+                    <div id="question-text" class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-6 leading-relaxed">
+                        <!-- Loaded dynamically via JS -->
+                    </div>
+
+                    <!-- Multiple Choice Option Containers -->
+                    <div id="quiz-options" class="space-y-3.5">
+                    <!-- Options generated dynamically -->
+                </div>
+            </div>
+
+            <!-- Explanation & Explanation Header Box -->
+            <div id="explanation-container" class="mt-8 p-6 rounded-2xl bg-white dark:bg-slate-900 border hidden shadow-inner transition-all duration-300">
+                <div class="flex items-center gap-2 mb-2 font-bold text-sm" id="explanation-status-header">
+                    <!-- Icon and Title injected here -->
+                </div>
+                <p id="explanation-text" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <!-- Explanation Text injected here -->
+                </p>
+            </div>
+
+            <!-- Quiz Navigation Buttons -->
+            <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                <button id="quiz-prev-btn" onclick="prevQuizQuestion()" class="px-5 py-2.5 text-sm font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors opacity-50 cursor-not-allowed" disabled>
+                    Back
+                </button>
+                <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-canva-purple to-brand-600 rounded-xl hover:opacity-90 transition-opacity hidden">
+                    Next Question
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Catalog Pricing & Products Section -->
+<section id="products" class="py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-sm font-semibold tracking-wider text-canva-purple dark:text-canva-blue uppercase">Official Shop Catalog</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight mt-2">
+                Get Fully Prepared in Just One Weekend
+            </h2>
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                Instantly download the latest study materials. Save over 60% compared to typical prep courses and start studying immediately with lifetime free updates.
+            </p>
+        </div>
+
+        <!-- Product Card Grid: Updated to 4 columns to match new layouts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            
+            <!-- Product Card 1: Free Sample -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-premium border border-slate-100 dark:border-slate-800/50 flex flex-col justify-between hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Free Starter</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-slate-50 mt-4">10-Question Sample</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Perfect first-step preview to get familiar with our logical style.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-slate-900 dark:text-slate-50">$0</span>
+                        <span class="text-sm text-slate-400 dark:text-slate-500"> / Free</span>
+                    </div>
+                    <ul class="space-y-3.5 border-t border-slate-100 dark:border-slate-800 pt-6">
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            10 High-Quality Exam Sim Questions
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Realistic case-based testing representation
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Detailed logic-flow answer key
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors">
+                        Try for Free
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Card 2: 110-Question Single Mock -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-premium border border-slate-100 dark:border-slate-800/50 flex flex-col justify-between hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-canva-purple bg-purple-50 dark:bg-purple-950/40 px-3 py-1 rounded-full">Single Mock Exam</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-slate-50 mt-4">110-Question Practice Exam</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Full-length trial containing scenario and law-related questions.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-slate-900 dark:text-slate-50">$40</span>
+                        <span class="text-sm text-slate-400 dark:text-slate-500"> on Ko-fi</span>
+                    </div>
+                    <ul class="space-y-3.5 border-t border-slate-100 dark:border-slate-800 pt-6">
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            110 Comprehensive Blueprint Questions
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Perfect syllabus weighting representation
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Full logic breakdown for every option
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Up-to-date with latest guidelines
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors">
+                        Shop Single Exam
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Card 3: 220-Question Bundle Pack -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-premium border border-slate-100 dark:border-slate-800/50 flex flex-col justify-between hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-canva-purple bg-purple-50 dark:bg-purple-950/40 px-3 py-1 rounded-full">Complete Bundle Pack</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-slate-50 mt-4">220-Question Full Bundle</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">The ultimate combination. Includes both Mock Exam A and B for thorough readiness.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-slate-900 dark:text-slate-50">$70</span>
+                        <span class="text-sm text-slate-400 dark:text-slate-500"> on Ko-fi</span>
+                    </div>
+                    <ul class="space-y-3.5 border-t border-slate-100 dark:border-slate-800 pt-6">
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            220 Highly Realistic Study Questions
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Contains Practice Exam 1 AND Practice Exam 2
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Save $10 compared to single purchases
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            100% Lifetime access to updates
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-colors">
+                        Shop Bundle
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Card 4: Complete Study Package (New!) -->
+            <div class="bg-gradient-to-b from-violet-50/50 to-white dark:from-slate-900/40 dark:to-slate-900 rounded-3xl p-6 shadow-xl border-2 border-canva-purple flex flex-col justify-between relative hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-canva-purple to-canva-blue text-white text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md">
+                    Best Value
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-canva-purple bg-purple-100 dark:bg-purple-950/40 px-3 py-1 rounded-full">Complete Pack</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-slate-50 mt-4">Full Study Package</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Ultimate comprehensive study guide combined with both mock exams.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-slate-900 dark:text-slate-50">$99</span>
+                        <span class="text-sm text-slate-400 dark:text-slate-500"> on Ko-fi</span>
+                    </div>
+                    <ul class="space-y-3.5 border-t border-slate-100 dark:border-slate-800 pt-6">
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Complete Law & Ethics Study Guide Text
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Both Practice Exam 1 AND Practice Exam 2 (220 Qs)
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Step-by-step logic and concept summaries
+                        </li>
+                        <li class="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            100% Lifetime access to study dashboard
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-4 text-xs font-bold text-white bg-gradient-to-r from-canva-purple to-brand-600 rounded-xl hover:opacity-90 transition-all shadow-md">
+                        Get Full Package
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Syllabus Blueprint Explorer -->
+    <section id="blueprint" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-semibold tracking-wider text-canva-purple dark:text-canva-blue uppercase">Official Syllabus Breakdown</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight mt-2">
+                    NPPE Exam Blueprint Categories
+                </h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                    The National Professional Practice Examination targets 6 major areas. Our question bank matches these weights exactly.
+                </p>
+            </div>
+
+            <!-- Interative Blueprint Tabs Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Tab Headers Column -->
+                <div class="lg:col-span-5 space-y-3">
+                    <button onclick="switchBlueprintTab(1)" id="bptab-1" class="w-full text-left p-4 rounded-2xl border-2 border-canva-purple bg-slate-50 dark:bg-slate-800/80 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-sm text-slate-900 dark:text-slate-50">I. Professionalism</span>
+                            <span class="text-xs bg-brand-100 dark:bg-brand-950 text-brand-800 dark:text-brand-300 font-semibold px-2.5 py-1 rounded-full">10% of Exam</span>
+                        </div>
+                    </button>
+                    <button onclick="switchBlueprintTab(2)" id="bptab-2" class="w-full text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-sm text-slate-600 dark:text-slate-400">II. Ethics</span>
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold px-2.5 py-1 rounded-full">20% of Exam</span>
+                        </div>
+                    </button>
+                    <button onclick="switchBlueprintTab(3)" id="bptab-3" class="w-full text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-sm text-slate-600 dark:text-slate-400">III. Professional Practice</span>
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold px-2.5 py-1 rounded-full">30% of Exam</span>
+                        </div>
+                    </button>
+                    <button onclick="switchBlueprintTab(4)" id="bptab-4" class="w-full text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-sm text-slate-600 dark:text-slate-400">IV. Law for Professional Practice</span>
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold px-2.5 py-1 rounded-full">20% of Exam</span>
+                        </div>
+                    </button>
+                    <button onclick="switchBlueprintTab(5)" id="bptab-5" class="w-full text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-sm text-slate-600 dark:text-slate-400">V. Professional Law</span>
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold px-2.5 py-1 rounded-full">10% of Exam</span>
+                        </div>
+                    </button>
+                    <button onclick="switchBlueprintTab(6)" id="bptab-6" class="w-full text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-sm text-slate-600 dark:text-slate-400">VI. Regulation and Discipline</span>
+                            <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold px-2.5 py-1 rounded-full">10% of Exam</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Tab Details Display Panel -->
+                <div class="lg:col-span-7 bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 min-h-[300px] flex flex-col justify-between">
+                    <div>
+                        <h4 id="blueprint-detail-title" class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-4">Topic I: Professionalism</h4>
+                        <p id="blueprint-detail-desc" class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Focuses on the definition and concept of self-regulation, the social contract, fiduciary responsibility, scopes of practice, and the primary importance of putting the public safety first over business relations.
+                        </p>
+                        <h5 class="text-xs font-bold uppercase text-slate-400 dark:text-slate-500 tracking-wider mb-3">Key Exam Pillars Tested</h5>
+                        <ul id="blueprint-detail-points" class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300">
+                            <!-- Bullet list items injected here -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section id="faq" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sm font-semibold tracking-wider text-canva-purple dark:text-canva-blue uppercase">Help Center</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight mt-2">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50 dark:bg-slate-900/40">
+                    <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 dark:text-slate-50 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                        <span>Is this exam prep suitable for all Canadian provinces?</span>
+                        <svg id="faq-arrow-1" class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Yes! The National Professional Practice Examination (NPPE) has been standardized and is used by 13 provincial and territorial self-regulatory engineering and geoscience bodies across Canada (e.g., APEGA, PEO, EGBC, APEGS, PEGNL, etc.) except for Quebec. 
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50 dark:bg-slate-900/40">
+                    <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 dark:text-slate-50 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                        <span>How is the 220-question package structured?</span>
+                        <svg id="faq-arrow-2" class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        The package includes two separate 110-question tests (Mock A and Mock B). Each exam is designed to mimic the exact timeframe (2.5 hours) and content weights of the actual NPPE syllabus. You can study them at your own pace.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50 dark:bg-slate-900/40">
+                    <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 dark:text-slate-50 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                        <span>Why are these materials so much cheaper than others?</span>
+                        <svg id="faq-arrow-3" class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        We believe that preparing for professional licensure shouldn't cost hundreds of dollars. As engineers who recently passed the exam, we compiled comprehensive notes, researched relevant cases, and developed original scenarios to offer a premium prep experience at an affordable cost.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50 dark:bg-slate-900/40">
+                    <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 dark:text-slate-50 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                        <span>Does the exam focus on technical engineering formulas?</span>
+                        <svg id="faq-arrow-4" class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        No. The NPPE does not test technical design formulas. Instead, it tests professionalism, ethics, standard of care, contract law, torts, employment legislation, intellectual property, and regulatory discipline.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with legal guardrails -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900 transition-colors duration-300 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-slate-900 pb-12">
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-canva-purple to-canva-blue flex items-center justify-center text-white font-extrabold text-xl">A</span>
+                    <span class="text-xl font-extrabold text-white tracking-tight">Ace in NPPE</span>
+                </a>
+                <div class="flex items-center gap-6 text-sm font-medium">
+                    <a href="https://ko-fi.com/aceinnppe" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ko-fi Shop</a>
+                    <a href="#products" class="hover:text-white transition-colors">Practice Exams</a>
+                    <a href="#mini-quiz" class="hover:text-white transition-colors">Interactive Trial</a>
+                </div>
+            </div>
+
+            <div class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+                <p>&copy; 2026 Ace in NPPE. All rights reserved.</p>
+                <p>Website design inspired by clean Canva visual frameworks.</p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-900/60 max-w-4xl mx-auto md:mx-0">
+                <p class="text-[10px] leading-relaxed text-slate-600 uppercase tracking-widest font-bold mb-2">Legal Disclaimer</p>
+                <p class="text-[11px] leading-relaxed text-slate-500">
+                    Ace in NPPE is an independent education resource. This preparation platform is not affiliated with, endorsed by, or partnered with the Association of Professional Engineers and Geoscientists of Alberta (APEGA), Professional Engineers Ontario (PEO), Association of Professional Engineers and Geoscientists of British Columbia (EGBC), Engineers Canada, or any other professional regulatory association. All trademarks are the property of their respective owners.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DARK MODE CONTROLLER
+        function initTheme() {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('sun-icon').classList.remove('hidden');
+                document.getElementById('moon-icon').classList.add('hidden');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('sun-icon').classList.add('hidden');
+                document.getElementById('moon-icon').classList.remove('hidden');
+            }
+        }
+        
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                document.getElementById('sun-icon').classList.add('hidden');
+                document.getElementById('moon-icon').classList.remove('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                document.getElementById('sun-icon').classList.remove('hidden');
+                document.getElementById('moon-icon').classList.add('hidden');
+            }
+        }
+
+        // MOBILE DRAWER CONTROLLER
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // ACCORDION CONTROLLER
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const arrow = document.getElementById(`faq-arrow-${index}`);
+            
+            content.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+
+        // BLUEPRINT TOPIC TABS ENGINE
+        const blueprintData = {
+            1: {
+                title: "Topic I: Professionalism (10% of exam)",
+                desc: "Focuses on the definition and concept of self-regulation, the social contract, fiduciary responsibility, scopes of practice, and the primary importance of putting public safety first.",
+                points: [
+                    "Definition and status of professional self-regulation",
+                    "Role and duties of professional engineers and geoscientists",
+                    "Engineering and geoscience acts, bylaws, and code frameworks",
+                    "Fiduciary duty of loyalty and trust to clients and employers"
+                ]
+            },
+            2: {
+                title: "Topic II: Ethics (20% of exam)",
+                desc: "Evaluates ethical decision-making frameworks, code of ethics applications, whistleblowing guidelines, managing and identifying conflicts of interest, and the hierarchy of duties.",
+                points: [
+                    "Conflict of Interest identification and disclosure logic",
+                    "Whistleblowing protocols and correct internal escalation steps",
+                    "Corporate pressures vs. professional duties",
+                    "Environmental stewardship and sustainable engineering ethics"
+                ]
+            },
+            3: {
+                title: "Topic III: Professional Practice (30% of exam)",
+                desc: "Analyzes standard of care, risk management, standard quality management, document authentication (stamps/seals), use of copyrighted templates, safety, and liability protection.",
+                points: [
+                    "Standard of Care expected from a reasonable practitioner",
+                    "Stamping and sealing electronic or physical documents responsibly",
+                    "Risk retention, transfer, and hazard analysis workflows",
+                    "Due Diligence concepts (foreseeability, controllability)"
+                ]
+            },
+            4: {
+                title: "Topic IV: Law for Professional Practice (20% of exam)",
+                desc: "Covers the Canadian legal system, fundamental contract law, torts/negligence, employment law, dispute resolution systems, intellectual property (patents, trademarks, design rights).",
+                points: [
+                    "The elements of a valid contract (offer, acceptance, capacity)",
+                    "Establishing professional negligence in tort (duty of care, breach, damages)",
+                    "Restrictive covenants and employment standards",
+                    "Limitation periods and joint/several liability"
+                ]
+            },
+            5: {
+                title: "Topic V: Professional Law (10% of exam)",
+                desc: "Addresses the specific legislation that governs engineers, geoscientists, and corporate firms. Looks closely at illegal practice, misuse of titles, and corporate permits.",
+                points: [
+                    "The Engineering Act and Geoscience Act authority scopes",
+                    "Enforcement of exclusive rights of practice",
+                    "Misuse of protected professional titles (e.g., P.Eng., P.Geo.)",
+                    "Certificate of Authorization (C of A) or corporate permits"
+                ]
+            },
+            6: {
+                title: "Topic VI: Regulation and Discipline (10% of exam)",
+                desc: "Explains how regulatory bodies investigate complaints against practitioners, professional discipline panels, penalty definitions, practice reviews, and continuing professional development.",
+                points: [
+                    "Complaints committee investigations vs. disciplinary hearings",
+                    "Available disciplinary penalties (fines, suspensions, revocations)",
+                    "Practice reviews of individual members and consulting firms",
+                    "Continuing Professional Development (CPD) compliance"
+                ]
+            }
+        };
+
+        function switchBlueprintTab(id) {
+            // Update active tab buttons styling
+            for (let i = 1; i <= 6; i++) {
+                const tab = document.getElementById(`bptab-${i}`);
+                const textSpan = tab.querySelector('span:first-child');
+                const badgeSpan = tab.querySelector('span:last-child');
+                
+                if (i === id) {
+                    tab.className = "w-full text-left p-4 rounded-2xl border-2 border-canva-purple bg-slate-50 dark:bg-slate-800/80 transition-all";
+                    textSpan.className = "font-bold text-sm text-slate-900 dark:text-slate-50";
+                    badgeSpan.className = "text-xs bg-brand-100 dark:bg-brand-950 text-brand-800 dark:text-brand-300 font-semibold px-2.5 py-1 rounded-full";
+                } else {
+                    tab.className = "w-full text-left p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all";
+                    textSpan.className = "font-bold text-sm text-slate-600 dark:text-slate-400";
+                    badgeSpan.className = "text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold px-2.5 py-1 rounded-full";
+                }
+            }
+
+            // Update details panel
+            const data = blueprintData[id];
+            document.getElementById('blueprint-detail-title').innerText = data.title;
+            document.getElementById('blueprint-detail-desc').innerText = data.desc;
+            
+            // Build bullets lists
+            const bulletContainer = document.getElementById('blueprint-detail-points');
+            bulletContainer.innerHTML = '';
+            data.points.forEach(point => {
+                const li = document.createElement('li');
+                li.className = "flex items-start gap-2.5 text-slate-600 dark:text-slate-300";
+                li.innerHTML = `<svg class="w-5 h-5 text-canva-purple shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" /></svg> ${point}`;
+                bulletContainer.appendChild(li);
+            });
+        }
+
+        // INTERACTIVE MOCK QUIZ LOGIC
+        const quizQuestions = [
+            {
+                topic: "Ethics / Whistleblowing",
+                question: "An engineer discovers that an industrial client is releasing chemical effluent slightly exceeding local municipal limits into a nearby river, but it is not a direct hazard to public health. The supervisor tells the engineer not to report it because a new wastewater treatment system will be online in 6 months. What should the engineer do?",
+                options: [
+                    "Immediately contact the provincial regulatory body and go to the press.",
+                    "Respect the supervisor’s decision since the system will be online in 6 months.",
+                    "Formally document the issue, escalate it internally to upper management, and advise the client of their legal obligations; if unaddressed and public safety or environmental risk escalates, report to authorities.",
+                    "Do nothing, as the engineer's liability is covered under vicarious liability of the employer."
+                ],
+                correct: 2,
+                explanation: "Whistleblowing follows a strict logical sequence of actions. You should almost always try to resolve the issue internally first by escalating the issue up the chain of management and advising of obligations. Reporting to your professional regulatory body (PEO, APEGA, etc.) or going public is a last resort after internal channels have failed."
+            },
+            {
+                topic: "Law / Tort and Negligence",
+                question: "Which of the following must a plaintiff establish in a court of law to succeed in a tort claim against an engineer for professional negligence?",
+                options: [
+                    "That a valid contract existed between the plaintiff and the engineer, a breach occurred, and damages resulted.",
+                    "That the engineer committed a criminal offense and acted with malicious intent.",
+                    "That the engineer owed a duty of care, the standard of care was breached, and direct damages resulted from that breach.",
+                    "That the engineer was acting as an independent contractor rather than an employee."
+                ],
+                correct: 2,
+                explanation: "Professional negligence in tort law requires proving three essential elements: (1) the defendant owed a duty of care to the plaintiff, (2) the defendant breached the standard of care of a reasonable professional, and (3) the plaintiff suffered damage as a direct result of that breach. Contractual privity is not required."
+            },
+            {
+                topic: "Ethics / Conflict of Interest",
+                question: "An engineer is tasked with reviewing bids for a municipal project. One of the bidding firms is owned by the engineer’s brother-in-law. What is the most appropriate course of action for the engineer?",
+                options: [
+                    "Review the bids neutrally without telling anyone, as long as no bias is shown.",
+                    "Immediately disclose the relationship in writing to the employer/client and ask to be recused from evaluating that specific bid.",
+                    "Tell the brother-in-law to withdraw his bid to avoid any potential issues.",
+                    "Suggest to the client that the brother-in-law's firm should receive the contract because they are highly reliable."
+                ],
+                correct: 1,
+                explanation: "Conflict of interest must always be identified, fully disclosed in writing immediately, and managed or avoided. Recusing oneself from evaluating the bid is the standard ethical action to preserve impartiality."
+            },
+            {
+                topic: "Professional Practice / Seal and Authentication",
+                question: "An engineer is asked by an employer to sign and seal a set of electrical drawings that were drafted by an experienced, unlicensed technologist. Under what conditions may the engineer seal these drawings?",
+                options: [
+                    "Only if the engineer thoroughly reviews, takes full responsibility for, and has exercised direct supervision/control over the preparation of the work.",
+                    "At any time, because the technologist is highly experienced and works for the same firm.",
+                    "Never, because only technologists are permitted to seal electrical drawings.",
+                    "Only if the provincial association issues a special permit for that specific project."
+                ],
+                correct: 0,
+                explanation: "A professional seal must only be applied to documents prepared by the professional or under their direct supervision and control. The professional takes full personal and professional responsibility for the sealed document."
+            },
+            {
+                topic: "Professional Law / Self-Regulation",
+                question: "Why are engineering and geoscience granted the privilege of self-regulation by provincial governments in Canada?",
+                options: [
+                    "To protect the economic interests and salaries of licensed members.",
+                    "Because the government doesn't have the technical expertise to regulate, and the professions commit to placing public interest ahead of self-interest.",
+                    "Because self-regulation reduces the tax burden of municipal governments.",
+                    "To ensure that international engineering graduates cannot practice without writing exams."
+                ],
+                correct: 1,
+                explanation: "Under the \"social contract\" of self-regulation, the public (via the legislature) grants the profession autonomy and the privilege to self-govern because members possess the specialized technical knowledge required. In return, the profession commits to protecting the public safety, health, and welfare ahead of the self-interest of its members."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let score = 0;
+        let selectedAnswers = new Array(quizQuestions.length).fill(null);
+
+        function renderQuiz() {
+            const questionObj = quizQuestions[currentQuizIndex];
+            
+            // Set basic texts
+            document.getElementById('quiz-question-number').innerText = `Question ${currentQuizIndex + 1} of ${quizQuestions.length} (${questionObj.topic})`;
+            document.getElementById('quiz-current-score').innerText = `Score: ${score} / ${quizQuestions.length}`;
+            document.getElementById('question-text').innerText = questionObj.question;
+            
+            // Calculate progress bar width
+            const percent = ((currentQuizIndex + 1) / quizQuestions.length) * 100;
+            document.getElementById('quiz-progress-bar').style.width = `${percent}%`;
+
+            // Reset navigation button logic
+            const prevBtn = document.getElementById('quiz-prev-btn');
+            if (currentQuizIndex === 0) {
+                prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                prevBtn.disabled = true;
+            } else {
+                prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                prevBtn.disabled = false;
+            }
+
+            // Options loading
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            questionObj.options.forEach((option, index) => {
+                const optButton = document.createElement('button');
+                optButton.onclick = () => selectQuizOption(index);
+                optButton.className = "w-full text-left p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950/40 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm transition-colors";
+                
+                // If answer was already selected, style appropriately
+                if (selectedAnswers[currentQuizIndex] !== null) {
+                    optButton.disabled = true; // Lock further selection
+                    if (index === questionObj.correct) {
+                        optButton.className = "w-full text-left p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20 font-bold text-sm transition-colors text-emerald-800 dark:text-emerald-300";
+                    } else if (index === selectedAnswers[currentQuizIndex]) {
+                        optButton.className = "w-full text-left p-4 rounded-xl border-2 border-red-500 bg-red-50/50 dark:bg-red-950/20 font-bold text-sm transition-colors text-red-800 dark:text-red-300";
+                    } else {
+                        optButton.className = "w-full text-left p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-900/10 font-medium text-sm text-slate-400 dark:text-slate-600 cursor-not-allowed";
+                    }
+                }
+
+                optButton.innerText = option;
+                optionsContainer.appendChild(optButton);
+            });
+
+            // Display explanations panel if selected already
+            const explanationContainer = document.getElementById('explanation-container');
+            const nextBtn = document.getElementById('quiz-next-btn');
+
+            if (selectedAnswers[currentQuizIndex] !== null) {
+                explanationContainer.classList.remove('hidden');
+                document.getElementById('explanation-text').innerText = questionObj.explanation;
+                
+                const statusHeader = document.getElementById('explanation-status-header');
+                if (selectedAnswers[currentQuizIndex] === questionObj.correct) {
+                    statusHeader.className = "flex items-center gap-2 mb-2 font-bold text-sm text-emerald-600 dark:text-emerald-400";
+                    statusHeader.innerHTML = `<svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" /></svg> Correct Answer`;
+                } else {
+                    statusHeader.className = "flex items-center gap-2 mb-2 font-bold text-sm text-red-600 dark:text-red-400";
+                    statusHeader.innerHTML = `<svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg> Incorrect Selection`;
+                }
+
+                if (currentQuizIndex < quizQuestions.length - 1) {
+                    nextBtn.innerText = "Next Question";
+                    nextBtn.classList.remove('hidden');
+                } else {
+                    nextBtn.innerText = "Finish Quiz & See Results";
+                    nextBtn.classList.remove('hidden');
+                }
+            } else {
+                explanationContainer.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+            }
+        }
+
+        function selectQuizOption(index) {
+            const questionObj = quizQuestions[currentQuizIndex];
+            selectedAnswers[currentQuizIndex] = index;
+            
+            if (index === questionObj.correct) {
+                score++;
+            }
+            
+            renderQuiz();
+        }
+
+        function prevQuizQuestion() {
+            if (currentQuizIndex > 0) {
+                currentQuizIndex--;
+                renderQuiz();
+            }
+        }
+
+        function nextQuizQuestion() {
+            if (currentQuizIndex < quizQuestions.length - 1) {
+                currentQuizIndex++;
+                renderQuiz();
+            } else {
+                // Quiz completed state display inside quiz card
+                const container = document.getElementById('mini-quiz').querySelector('.bg-slate-50');
+                container.innerHTML = `
+                    <div class="text-center py-8">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-canva-purple to-canva-blue flex items-center justify-center text-white mx-auto mb-6 shadow-md">
+                            <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-slate-900 dark:text-slate-50">Quiz Complete!</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mt-2 max-w-md mx-auto">
+                            You scored <span class="font-extrabold text-canva-purple dark:text-canva-blue text-lg">${score} out of ${quizQuestions.length}</span> correct answers. 
+                        </p>
+                        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <button onclick="restartQuiz()" class="w-full sm:w-auto px-6 py-3 font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 border transition-all text-sm">
+                                Try Again
+                            </button>
+                            <a href="#products" class="w-full sm:w-auto px-6 py-3 font-bold text-white bg-gradient-to-r from-canva-purple to-brand-600 rounded-xl hover:opacity-90 transition-opacity text-sm inline-block">
+                                Purchase Full 220 Qs Pack
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function restartQuiz() {
+            // Restore structural container state
+            const sectionContainer = document.getElementById('mini-quiz').querySelector('.max-w-4xl');
+            sectionContainer.innerHTML = `
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-sm font-semibold tracking-wider text-canva-purple dark:text-canva-blue uppercase">Interactive Sandbox</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight mt-2">
+                        Test Your Readiness Right Now
+                    </h2>
+                    <p class="mt-3 text-slate-600 dark:text-slate-300">
+                        Try this interactive 5-question quick sampler representing actual scenario and law-related questions on the NPPE.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-800/40 rounded-3xl p-6 sm:p-10 shadow-premium border border-slate-100 dark:border-slate-800">
+                    <div class="flex items-center justify-between mb-6 text-sm text-slate-500 dark:text-slate-400 font-medium">
+                        <span id="quiz-question-number">Question 1 of 5</span>
+                        <span id="quiz-current-score">Score: 0 / 5</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full mb-8 overflow-hidden">
+                        <div id="quiz-progress-bar" class="bg-gradient-to-r from-canva-purple to-canva-blue h-full w-1/5 transition-all duration-300"></div>
+                    </div>
+
+                    <div class="min-h-[220px]">
+                        <div id="question-text" class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-6 leading-relaxed"></div>
+                        <div id="quiz-options" class="space-y-3.5"></div>
+                    </div>
+
+                    <div id="explanation-container" class="mt-8 p-6 rounded-2xl bg-white dark:bg-slate-900 border hidden shadow-inner transition-all duration-300">
+                        <div class="flex items-center gap-2 mb-2 font-bold text-sm" id="explanation-status-header"></div>
+                        <p id="explanation-text" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+                        <button id="quiz-prev-btn" onclick="prevQuizQuestion()" class="px-5 py-2.5 text-sm font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors opacity-50 cursor-not-allowed" disabled>Back</button>
+                        <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-canva-purple to-brand-600 rounded-xl hover:opacity-90 transition-opacity hidden">Next Question</button>
+                    </div>
+                </div>
+            `;
+            
+            currentQuizIndex = 0;
+            score = 0;
+            selectedAnswers = new Array(quizQuestions.length).fill(null);
+            renderQuiz();
+        }
+
+        // Window load initializer
+        window.onload = function() {
+            initTheme();
+            switchBlueprintTab(1);
+            renderQuiz();
+        }
+    </script>
+</body>
+</html>
